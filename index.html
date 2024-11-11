@@ -10,17 +10,26 @@
         <!-- daisyUi -->
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
-       
+
 
 </head>
 
-<body class="m-8 bg-white text-black">
+<body class="m-8 bg-white text-black max-w-screen-xl m-auto p-4">
         <header>
-                <h1 class="text-9xl text-center">Interval</h1>
+                <nav class="p-4 mt-5 mb-10 flex justify-between bg-cyan-200 rounded-xl  items-center">
+                        <div>
+                                <h1 class="text-xl font-bold">Interactive</h1>
+                                <p class="text-3xl">Geometry Genius</p>
+                        </div>
+
+                        <div>
+                                <button class="btn btn-primary text-xl text-white ">Blog</button>
+                        </div>
+                </nav>
 
         </header>
 
-        <main class="max-w-screen-xl m-auto">
+        <main>
                 <!-- main content container -->
                 <!-- shape card and area calculation container -->
                 <section class="flex flex-col  md:flex-row gap-5">
@@ -31,7 +40,7 @@
 
 
                                 <!-- Triangle card -->
-                                <div class="card  shadow-sm text-center">
+                                <div id="triangle-background" class="card  shadow-sm text-center">
                                         <figure>
                                                 <img src="images/triangle.png" alt="">
                                         </figure>
@@ -64,7 +73,7 @@
 
 
                                 <!--Rectangle card  -->
-                                <div class="card shadow-sm text-center">
+                                <div id="rectangle-background" class="card shadow-sm text-center">
                                         <figure>
                                                 <img src="images/rectangle.png" alt="">
                                         </figure>
@@ -73,7 +82,7 @@
                                                 <p class="text-2xl">Area (A) = W &#10005 L </p>
 
                                                 <div>
-                                                        <input  class="w-20 bg-gray-200 p-2 rounded-sm  text-center text-2xl"
+                                                        <input class="w-20 bg-gray-200 p-2 rounded-sm  text-center text-2xl"
                                                                 type="text" id="rectangle-width" placeholder="w">
                                                         <span class="mr-4">cm</span>
 
@@ -83,7 +92,8 @@
                                                 </div>
 
                                                 <div>
-                                                        <p class="text-2xl">Area : <span id="rectangle-area"></span>  <span> cm <sup>2</sup></span></p>
+                                                        <p class="text-2xl">Area : <span id="rectangle-area"></span>
+                                                                <span> cm <sup>2</sup></span></p>
                                                 </div>
 
                                                 <div class="card-action">
@@ -94,7 +104,7 @@
                                 </div>
 
                                 <!--Parallelogram  -->
-                                <div class="card  shadow-sm text-center">
+                                <div id="parallelogram-background" class="card  shadow-sm text-center">
                                         <figure>
                                                 <img src="images/parallelogram.png" alt="">
                                         </figure>
@@ -115,7 +125,8 @@
                                                 </div>
 
                                                 <div>
-                                                        <p class="text-2xl">Area : <span id="parallelogram-area"></span>  <span> cm <sup>2</sup></span></p>
+                                                        <p class="text-2xl">Area : <span id="parallelogram-area"></span>
+                                                                <span> cm <sup>2</sup></span></p>
                                                 </div>
 
                                                 <div class="card-action">
@@ -126,14 +137,15 @@
                                 </div>
 
                                 <!--Rhombus -->
-                                <div class="card  shadow-sm text-center">
+                                <div id="rhombus-background" class="card  shadow-sm text-center">
                                         <figure>
                                                 <img src="images/rhombus.png" alt="">
                                         </figure>
                                         <div class="card-body">
                                                 <h2 class="text-3xl">Rhombus</h2>
-                                                <p class="text-xl">Area (A) = 0.5 &#10005 d<sub>1</sub> &#10005 d<sub>2</sub></p>
-                                                <p class="text-2xl">d<sub>1</sub> = 16cm,   d<sub>2</sub> = 8cm </p>
+                                                <p class="text-xl">Area (A) = 0.5 &#10005 d<sub>1</sub> &#10005
+                                                        d<sub>2</sub></p>
+                                                <p class="text-2xl">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm </p>
 
                                                 <div>
                                                         <!-- diagonals-1 input field -->
@@ -147,7 +159,8 @@
                                                 </div>
 
                                                 <div>
-                                                        <p class="text-2xl">Area : <span id="rhombus-area"></span>  <span> cm <sup>2</sup></span></p>
+                                                        <p class="text-2xl">Area : <span id="rhombus-area"></span>
+                                                                <span> cm <sup>2</sup></span></p>
                                                 </div>
 
                                                 <div class="card-action">
@@ -158,9 +171,9 @@
                                 </div>
 
                                 <!--Pentagon  -->
-                                <div class="card  shadow-sm text-center">
+                                <div id="pentagon-background" class="card  shadow-sm text-center">
                                         <figure>
-                                                <img src="images/parallelogram.png" alt="">
+                                                <img src="images/pentagon.png" alt="">
                                         </figure>
                                         <div class="card-body">
                                                 <h2 class="text-3xl">Pentagon</h2>
@@ -179,20 +192,21 @@
                                                 </div>
 
                                                 <div>
-                                                        <p class="text-2xl">Area : <span id="pentagon-area"></span>  <span> cm <sup>2</sup></span></p>
+                                                        <p class="text-2xl">Area : <span id="pentagon-area"></span>
+                                                                <span> cm <sup>2</sup></span></p>
                                                 </div>
 
                                                 <div class="card-action">
-                                                <button onclick="calculatePentagon()"
+                                                        <button onclick="calculatePentagon()"
                                                                 class="btn btn-primary text-xl w-full">Calculate</button>
                                                 </div>
                                         </div>
                                 </div>
 
                                 <!--Ellipse  -->
-                                <div class="card  shadow-sm text-center">
+                                <div id="ellipse-background" class="card  shadow-sm text-center">
                                         <figure>
-                                                <img src="images/parallelogram.png" alt="">
+                                                <img src="images/ellipse.png" alt="">
                                         </figure>
                                         <div class="card-body">
                                                 <h2 class="text-3xl">Ellipse</h2>
@@ -211,7 +225,8 @@
                                                 </div>
 
                                                 <div>
-                                                        <p class="text-2xl">Area : <span id="ellipse-area"></span>  <span> cm <sup>2</sup></span></p>
+                                                        <p class="text-2xl">Area : <span id="ellipse-area"></span>
+                                                                <span> cm <sup>2</sup></span></p>
                                                 </div>
 
                                                 <div class="card-action">
@@ -233,11 +248,12 @@
                 </section>
 
         </main>
-        
+
         <script src="js/triangle-&-rectangle-calculate.js"></script>
         <script src="js/parallelogram-calculate.js"></script>
         <script src="js/rhombus-pentagon-ellipse-calculation.js"></script>
-      
+        <script src="js/card-background-color.js"></script>
+
 </body>
 
 </html>

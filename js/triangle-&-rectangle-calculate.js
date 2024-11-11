@@ -44,7 +44,7 @@ triangleAreaSpan.innerText = area;
 
 
 //Rectangle Calculation function
-function calculateRectangleArea(){
+function calculateRectangle(){
 // get the rectangle width part
 
         //get the id rectangle-width
